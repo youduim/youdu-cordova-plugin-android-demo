@@ -29,7 +29,7 @@ exports.logOut = function (success,error) {
     exec(success, error, 'YouduIMPlugin', 'logOut', []);
 }
 
-exports.setUnreadCountCallback = function(callback) {
-    exec(callback, null, 'YouduIMPlugin', 'setUnreadCountCallback', []);
+exports.getUnreadCount = function(callback) {
+    exec(callback, null, 'YouduIMPlugin', 'getUnreadCount', []);
 }
 });

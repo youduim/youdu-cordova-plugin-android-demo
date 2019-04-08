@@ -215,8 +215,8 @@ window.GotoCreateSession = function() {
 window.LogOut = function() {
     cordova.plugins.YouduIMPlugin.logOut(JsCallback,null);
 }
-window.setUnreadCountCallback = function() {
-    cordova.plugins.YouduIMPlugin.setUnreadCountCallback(JsCallback);
+window.getUnreadCount = function() {
+    cordova.plugins.YouduIMPlugin.getUnreadCount(JsCallback);
 }
 
 setTimeout(function(){
