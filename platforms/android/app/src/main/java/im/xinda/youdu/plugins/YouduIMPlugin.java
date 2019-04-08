@@ -255,6 +255,12 @@ public class YouduIMPlugin extends CordovaPlugin {
         return result;
     }
 
+    private PluginResult makeErrorPluginResult(JSONObject object) {
+        PluginResult result = new PluginResult(PluginResult.Status.ERROR, object);
+        result.setKeepCallback(true);
+        return result;
+    }
+
     @NotificationHandler(name = YDSessionUIModel.kSessionListTotalUnreadSizeChangeNotification)
     private void onTotalUnreadSizeChange(int size) {
         JSONObject unreadCount = new JSONObject();
@@ -285,6 +291,16 @@ public class YouduIMPlugin extends CordovaPlugin {
                 .setFirstButton(RUtils.INSTANCE.getString(im.xinda.youdu.ui.R.string.confirm));
         dialog.setDialogButtonClick(buttonName -> {
             // todo handle login failed
+            JSONObject loginFailed = new JSONObject();
+            JSONObject failedInfo = new JSONObject();
+            try {
+                failedInfo.put("title",title);
+                failedInfo.put("message",message);
+                loginFailed.put("loginFailed", failedInfo);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            getCallbackContext().sendPluginResult(makeSuccPluginResult(loginFailed));
         });
 
         dialog.show();

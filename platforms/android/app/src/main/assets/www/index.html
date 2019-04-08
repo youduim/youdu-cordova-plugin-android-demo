@@ -29,12 +29,15 @@
             if(data["loginSucc"] != null) {
                 alert("succ");
                window.open('sessions.html','_self',"");
+            } else if(data["loginFailed"] != null) {
+               alert("login failed:" + data.loginFailed.message);
+
             }
         }
 
         window.Login = function login(){
-            cordova.plugins.YouduIMPlugin.setServer("10.0.0.51","","7080",JsCallback,null)
-            cordova.plugins.YouduIMPlugin.loginWithAccount("mitest","123",JsCallback,null);
+            cordova.plugins.YouduIMPlugin.setServer("10.0.0.51","","7080",null,null)
+            cordova.plugins.YouduIMPlugin.loginWithAccount("mitest","123",JsCallback,JsCallback);
         }
 </script>
 </html>
