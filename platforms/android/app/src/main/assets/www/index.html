@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <title>FrozenUI Demo</title>
+    <!-- 引入 FrozenUI -->
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css"/>
+</head>
+<body>
+<div class="ui-btn-wrap">
+    <button class="ui-btn-lg ui-btn-primary" onclick="Login();">
+        登录
+    </button>
+</div>
+
+
+</body>
+
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+        window.JsCallback = function callBack(data) {
+            if(data["loginSucc"] != null) {
+                alert("succ");
+               window.open('sessions.html','_self',"");
+            }
+        }
+
+        window.Login = function login(){
+            cordova.plugins.YouduIMPlugin.setServer("10.0.0.51","","7080",JsCallback,null)
+            cordova.plugins.YouduIMPlugin.loginWithAccount("mitest","123",JsCallback,null);
+        }
+</script>
+</html>

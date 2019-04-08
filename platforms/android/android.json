@@ -1,0 +1,504 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"YouduIMPlugin\"><param name=\"android-package\" value=\"im.xinda.youdu.plugins.YouduIMPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<meta-data android:name=\"com.huawei.hms.client.appid\" android:value=\"@string/huawei_app_id\" />",
+              "count": 1
+            },
+            {
+              "xml": "<provider android:authorities=\"your_app_id.update.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"com.huawei.hms.update.provider.UpdateProvider\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"im.xinda.youdu.broadcastreceiver.MeizuBroadcastReceiver\"><intent-filter><action android:name=\"com.meizu.flyme.push.intent.MESSAGE\" /><action android:name=\"com.meizu.flyme.push.intent.REGISTER.FEEDBACK\" /><action android:name=\"com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK\" /><action android:name=\"com.meizu.c2dm.intent.REGISTRATION\" /><action android:name=\"com.meizu.c2dm.intent.RECEIVE\" /><category android:name=\"your_app_id\" /></intent-filter></receiver>",
+              "count": 1
+            },
+            {
+              "xml": "<meta-data android:name=\"com.amap.api.v2.apikey\" android:value=\"@string/amap_app_id\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ChatActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ChatDetailActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.UserActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTask\" android:name=\"im.xinda.youdu.ui.activities.ChatFileActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ProfileActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SessionManageActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTop\" android:name=\"im.xinda.youdu.ui.activities.VideoConferenceActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTop\" android:name=\"im.xinda.youdu.ui.activities.DoubleMeetingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SessionSettingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:configChanges=\"orientation|screenSize\" android:hardwareAccelerated=\"true\" android:name=\"im.xinda.youdu.ui.activities.WebActivity\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.DeptPreviewActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme_Bottom\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SessionSearchActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SessionMemberSelectorActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme_Bottom\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SessionCreatorActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AlbumActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.DeptActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.FavoriteDepartmentActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SinglePhotoActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.GalleryActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SystemAndBroadcastActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SystemMsgActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.BroadcastMsgActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.CollectionsActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.FileBrowserActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ShareActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme_Bottom\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SettingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.FontSettingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SilentActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.CollectDetailActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SearchActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme_Bottom\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.CodeReceiverActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:clearTaskOnLaunch=\"true\" android:name=\"im.xinda.youdu.ui.activities.CaptureQrcodeActivity\" android:screenOrientation=\"portrait\" android:stateNotNeeded=\"true\" android:theme=\"@style/AppCompatCaptureTheme\" android:windowSoftInputMode=\"stateAlwaysHidden\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ConfirmLoginActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.FileCacheClearActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ChatPhotoPreviewActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ServerQrcodeActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.QrcodeDisplayActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ServerDetailActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AvatarCameraCaptureActivity\" android:screenOrientation=\"portrait\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AvatarPreviewActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AvatarEditActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.LaunchPermissionActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.DownloadOrUpdateActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AvatarCamera2Activity\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.VerifyPasswordActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:exported=\"true\" android:name=\"im.xinda.youdu.ui.activities.ReverseLoginActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\"><intent-filter><action android:name=\"im.xinda.youdu.ui.Reverselogin\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.DBMigrationActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.EnterpriseAppActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.InvitationEditActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ChatRecordActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SDCardFileActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SDCardActivity\" android:screenOrientation=\"portrait\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ClientManagerActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.VideoCaptureActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.VideoViewActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.InvitationShowActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ServerSettingActivity\" android:screenOrientation=\"portrait\" android:windowSoftInputMode=\"adjustPan\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.EnterpriseServerInfoSearchActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleInstance\" android:name=\"im.xinda.youdu.ui.activities.SearchIndexDownloadActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.MapLocationActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.WipeDataActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.DevicesActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTask\" android:name=\"im.xinda.youdu.ui.activities.CreatePswActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" android:windowSoftInputMode=\"stateAlwaysVisible\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTask\" android:name=\"im.xinda.youdu.ui.activities.EnterPswActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" android:windowSoftInputMode=\"stateAlwaysVisible\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SessionMessageActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.TamperedShowActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SingleModifyActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ModifyPasswordActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.RadioListActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SingleMessagePreviewActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ManageStickerActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.MessageAlertSettingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AccountSafetyActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.OfflinePasswordSettingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SMSSendActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AboutActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ApplicationDetailsActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SMSResultActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.UserSettingActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.SignatureModifyActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:launchMode=\"singleTop\" android:name=\"im.xinda.youdu.ui.activities.PhoneIdentifyActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.MapViewActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.MapSearchActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.ReceiptStatusActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AnnouncementModifyActivity\" android:screenOrientation=\"portrait\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.BackgroundActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.DefaultBackgroundActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.AllSessionsActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.WebFileActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:name=\"im.xinda.youdu.ui.activities.FeedBackActivity\" android:screenOrientation=\"portrait\" android:theme=\"@style/AppTheme\" />",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<permission android:name=\"your_app_id.permission.MIPUSH_RECEIVE\" android:protectionLevel=\"signature\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"your_app_id.permission.MIPUSH_RECEIVE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<permission android:name=\"your_app_id.push.permission.MESSAGE\" android:protectionLevel=\"signature\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"your_app_id.push.permission.MESSAGE\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/value/string.xml": {
+        "parents": {
+          "/resources": []
+        }
+      },
+      "app/src/main/res/value/string.xml": {
+        "parents": {
+          "/resources": []
+        }
+      },
+      "app/src/main/res/values/string.xml": {
+        "parents": {
+          "/resources": []
+        }
+      },
+      "app/src/main/res/values/strings.xml": {
+        "parents": {
+          "/resources": [
+            {
+              "xml": "<string name=\"meizu_app_id\">your_meizu_app_id</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"meizu_app_secret\">your_meizu_app_secret</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"meizu_app_key\">your_meizu_app_key</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"huawei_app_id\">your_huawei_app_id</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"huawei_app_secret\">your_huawei_app_secret</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"xiaomi_app_id\">your_xiaomi_app_id</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"xiaomi_app_secret\">your_xiaomi_app_secret</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"xiaomi_app_key\">your_xiaomi_app_key</string>",
+              "count": 1
+            },
+            {
+              "xml": "<string name=\"amap_app_id\">your_amap_app_id</string>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "im.xinda.youdu.cordova"
+    },
+    "im.xinda.youdu.plugins": {
+      "PACKAGE_NAME": "im.xinda.youdu.cordova"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "im.xinda.youdu.plugins.YouduIMPlugin",
+      "file": "plugins/im.xinda.youdu.plugins/www/YouduIMPlugin.js",
+      "pluginId": "im.xinda.youdu.plugins",
+      "clobbers": [
+        "cordova.plugins.YouduIMPlugin"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-whitelist": "1.3.3",
+    "im.xinda.youdu.plugins": "1.0.1"
+  }
+}

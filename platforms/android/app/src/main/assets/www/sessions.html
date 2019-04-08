@@ -1,0 +1,227 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="http://i.gtimg.cn/vipstyle/frozenui/2.0.0/css/frozen.css">
+
+    <title>Document</title>
+    <style>
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-text-size-adjust: none !important;
+	text-size-adjust: none;
+}
+html,body { height: 100%; }
+body { font-size: 14px; line-height: 1; font-family: Arial,Helvetica, "Microsoft Yahei", STXihei , sans-serif; }
+button, input, textarea, select{
+	font-family: Arial,Helvetica, "Microsoft Yahei", STXihei , sans-serif;
+	font-size: 14px;
+	outline: none;
+	box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{ font-weight: 400; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+img { border: 0; max-width: 100%; }
+
+a { text-decoration: none; -webkit-touch-callout: none;  }
+
+pre{
+	white-space: pre-wrap;
+	line-height: 1.5;
+}
+select, input, textarea{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-color: transparent;
+    box-shadow: none;
+    /*background:transparent;*/
+}
+
+input[type="checkbox"] {vertical-align: middle; margin-top: 0; cursor: pointer;}
+
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+/* IE 6/7 */
+.clearfix { zoom: 1; }
+/* remore IE input X */
+::-ms-clear, ::-ms-reveal{display: none;}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-color: #D8D6D6;
+}</style>
+    <style>
+.session-list{
+    -webkit-overflow-scrolling: touch;
+}
+.session-item{
+    padding: 10px;
+    min-height: 60px;
+}
+.session-item img{
+    float: left;
+    width: 50px;
+    height: 50px;
+}
+.notice {
+    width:20px;
+    height:20px;
+    line-height:20px;
+    font-size:10px;
+    color:#fff;
+    text-align:center;
+    background-color:#f00;
+    border-radius:50%;
+    position:absolute;
+    right: 10px;
+    top: 10px;
+}
+
+</style>
+
+
+</head>
+<body>
+<div class="ui-btn-wrap">
+    <button class="ui-btn-lg ui-btn-primary" onclick="GotoCreateSession();">
+        创建会话
+    </button>
+</div>
+<div class="ui-btn-wrap">
+    <button class="ui-btn-lg ui-btn-primary" onclick="LogOut();">
+        退出
+    </button>
+</div>
+<div class="session-list" id="app">
+    <ul class="ui-list ui-list-function ui-border-tb">
+        <li v-for="item in list"  :key="item.sessionId" @click="GotoSession(item);">
+            <div class="ui-avatar">
+                <img :src="item.avatar" alt="">
+                <div class="notice" v-if="item.unreadSize">{{item.unreadSize}}</div>
+            </div>
+            <div class="ui-list-info ui-border-t">
+                <h4 class="ui-nowrap">{{item.title}}</h4>
+                <p>{{item.content}}</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script>
+
+var app = new Vue({
+    el: '#app',
+    data: {
+        message: 'Hello Vue!',
+        list: [],
+    },
+    methods: {
+        setInit: function(d) {
+            this.list = d;
+            <!--this.list.map(function(m){-->
+                <!--m.avatar = ''-->
+            <!--})-->
+            for (var i = 0; i < this.list.length; i++) {
+                this.list[i].avatar = '';
+            }
+        },
+        setAvatar: function (d) {
+            var that = this;
+            var index = -1;
+            for (var i = 0; i < this.list.length; i++) {
+                if (d.sessionId == this.list[i].sessionId) {
+                    index = i
+                    this.$set(this.list, i, Object.assign({}, this.list[i], {
+                        avatar: 'data:image/png;base64,' + d.avatar
+                    }))
+                    break
+                }
+            }
+            if (-1 != index) {
+
+            }
+        },
+        GotoSession: function (item) {
+            GotoSession(item.sessionId)
+        }
+
+    }
+})
+
+window.JsCallback = function(data) {
+    if(data["sessionList"] != null) {
+        app.setInit(data.sessionList)
+    } else if (data["head"] != null) {
+        app.setAvatar(data.head)
+    } else if (data["kickOut"] != null) {
+        //todo process kickout
+        alert("kicked out!");
+    } else if (data["logout"] != null) {
+        alert("logout!");
+        //todo process logout
+    } else if (data["unreadCount"] != null) {
+        // todo process unreadCount
+        alert("unread count"+data.unreadCount);
+    }
+}
+
+window.SetAvatar = function(data) {
+    app.setAvatar(data)
+}
+
+window.GetSessionList = function() {
+    cordova.plugins.YouduIMPlugin.getSessionList(JsCallback, null);
+}
+
+window.GotoSession = function(sessionId) {
+    cordova.plugins.YouduIMPlugin.gotoSession(sessionId,null,null);
+}
+window.GotoCreateSession = function() {
+    cordova.plugins.YouduIMPlugin.gotoCreateSession(null,null);
+}
+window.LogOut = function() {
+    cordova.plugins.YouduIMPlugin.logOut(JsCallback,null);
+}
+window.setUnreadCountCallback = function() {
+    cordova.plugins.YouduIMPlugin.setUnreadCountCallback(JsCallback);
+}
+
+setTimeout(function(){
+    setUnreadCountCallback();
+    GetSessionList();
+}, 1000)
+</script>
+</html>

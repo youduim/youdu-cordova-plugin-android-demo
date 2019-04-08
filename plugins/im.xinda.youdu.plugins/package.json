@@ -1,0 +1,51 @@
+{
+  "_from": "git+https://github.com/jeason789/YouduIMPlugin.git",
+  "_id": "im.xinda.youdu.plugins@1.0.1",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/im.xinda.youdu.plugins",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/jeason789/YouduIMPlugin.git",
+    "rawSpec": "https://github.com/jeason789/YouduIMPlugin.git",
+    "saveSpec": "git+https://github.com/jeason789/YouduIMPlugin.git",
+    "fetchSpec": "https://github.com/jeason789/YouduIMPlugin.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/jeason789/YouduIMPlugin.git#a5301466be275d63ff67bdc256f8b2f5cbdc8708",
+  "_spec": "https://github.com/jeason789/YouduIMPlugin.git",
+  "_where": "/Users/jeason/example/simplecordova",
+  "author": {
+    "name": "jeason789"
+  },
+  "bugs": {
+    "url": "https://github.com/jeason789/YouduIMPlugin/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "im.xinda.youdu.plugins",
+    "platforms": []
+  },
+  "deprecated": false,
+  "description": "1. 集成方式 2. 推送与高德地图信息配置 3. 接口说明 4. 其他接口",
+  "homepage": "https://github.com/jeason789/YouduIMPlugin#readme",
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "im.xinda.youdu.plugins",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeason789/YouduIMPlugin.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1"
+}

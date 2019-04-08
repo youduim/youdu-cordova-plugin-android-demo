@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">SimpleCordova</string>
+    <string name="launcher_name">@string/app_name</string>
+    <string name="activity_name">@string/launcher_name</string>
+    <string name="xiaomi_app_id">2882303761517971626</string>
+    <string name="xiaomi_app_secret">trN8egwCr34Xqx9HXBIW1w==</string>
+    <string name="xiaomi_app_key">5161797148626</string>
+    <string name="meizu_app_id">your_meizu_app_id</string>
+    <string name="meizu_app_secret">your_meizu_app_secret</string>
+    <string name="meizu_app_key">your_meizu_app_key</string>
+    <string name="huawei_app_id">your_huawei_app_id</string>
+    <string name="huawei_app_secret">your_huawei_app_secret</string>
+    <string name="amap_app_id">your_amap_app_id</string>
+</resources>

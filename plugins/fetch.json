@@ -1,0 +1,18 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "im.xinda.youdu.plugins": {
+    "source": {
+      "type": "registry",
+      "id": "https://github.com/jeason789/YouduIMPlugin.git"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}
