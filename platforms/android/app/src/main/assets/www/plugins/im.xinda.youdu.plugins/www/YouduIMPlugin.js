@@ -1,10 +1,6 @@
 cordova.define("im.xinda.youdu.plugins.YouduIMPlugin", function(require, exports, module) {
 var exec = require('cordova/exec');
 
-exports.setBuin = function(buin,success,error){
-    exec(success, error, 'YouduIMPlugin', 'setBuin',[buin]);
-}
-
 exports.setServer = function(host1,host2,port,success,error) {
     exec(success, error, 'YouduIMPlugin', 'setServer',[host1,host2,port]);
 }
