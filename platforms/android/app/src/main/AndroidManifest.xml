@@ -10,7 +10,7 @@
             </intent-filter>
         </activity>
         <meta-data android:name="com.huawei.hms.client.appid" android:value="@string/huawei_app_id" />
-        <provider android:authorities="your_app_id.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider" />
+        <provider android:authorities="im.xinda.youdu.cordova.update.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.huawei.hms.update.provider.UpdateProvider" />
         <receiver android:name="im.xinda.youdu.broadcastreceiver.MeizuBroadcastReceiver">
             <intent-filter>
                 <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
@@ -18,7 +18,7 @@
                 <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
                 <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
                 <action android:name="com.meizu.c2dm.intent.RECEIVE" />
-                <category android:name="your_app_id" />
+                <category android:name="im.xinda.youdu.cordova" />
             </intent-filter>
         </receiver>
         <meta-data android:name="com.amap.api.v2.apikey" android:value="@string/amap_app_id" />
@@ -122,8 +122,4 @@
     <uses-permission android:name="im.xinda.youdu.cordova.permission.MIPUSH_RECEIVE" />
     <permission android:name="im.xinda.youdu.cordova.push.permission.MESSAGE" android:protectionLevel="signature" />
     <uses-permission android:name="im.xinda.youdu.cordova.push.permission.MESSAGE" />
-    <permission android:name="your_app_id.permission.MIPUSH_RECEIVE" android:protectionLevel="signature" />
-    <uses-permission android:name="your_app_id.permission.MIPUSH_RECEIVE" />
-    <permission android:name="your_app_id.push.permission.MESSAGE" android:protectionLevel="signature" />
-    <uses-permission android:name="your_app_id.push.permission.MESSAGE" />
 </manifest>
