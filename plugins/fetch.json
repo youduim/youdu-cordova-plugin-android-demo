@@ -10,7 +10,7 @@
   "im.xinda.youdu.plugins": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/jeason789/YouduIMPlugin.git"
+      "id": "https://github.com/youduim/YouduIMPlugin.git"
     },
     "is_top_level": true,
     "variables": {}

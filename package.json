@@ -15,7 +15,7 @@
   "dependencies": {
     "cordova-android": "8.0.0",
     "cordova-plugin-whitelist": "^1.3.3",
-    "im.xinda.youdu.plugins": "git+https://github.com/jeason789/YouduIMPlugin.git"
+    "im.xinda.youdu.plugins": "git+https://github.com/youduim/YouduIMPlugin.git"
   },
   "cordova": {
     "plugins": {
